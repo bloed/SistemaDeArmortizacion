@@ -24,4 +24,5 @@ while True:
     print("Got a connection from %s" % str(addr))
     currentTime = "Chucky Date and Time: " +time.ctime(time.time()) + "\r\n"
     clientsocket.send(currentTime.encode('ascii'))
+    print("message sent")
     clientsocket.close()
