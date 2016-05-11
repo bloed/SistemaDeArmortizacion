@@ -1,14 +1,19 @@
 package Adaptador;
 
-import DTOs.DTOAdaptador;
+import DTOs.DTOAdaptadorLocalHost;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.Socket;
 
-public class AdaptadorPython extends AdaptadorAbstracto{
+public class AdaptadorLocalHost extends AdaptadorAbstracto{
 
-    public AdaptadorPython(DTOAdaptador dto) {
-        super(dto);
+    private String hostname;
+    private Integer port;
+    private Socket socket;
+    
+    public AdaptadorLocalHost (DTOAdaptadorLocalHost dto) {
+        hostname = dto.getHostName();
+        port = dto.getPort();
     }
 
     @Override
@@ -30,7 +35,7 @@ public class AdaptadorPython extends AdaptadorAbstracto{
         catch (Exception e) {
             throw e;
         }
-    }
+    }  
 
     @Override
     protected void cerrarConexion() throws Exception {

@@ -1,10 +1,10 @@
 package DTOs;
 
-public class DTOAdaptador {
+public class DTOAdaptadorLocalHost {
     private String hostname;
     private Integer port;
     
-    public DTOAdaptador(String pHostname, Integer pPort){
+    public DTOAdaptadorLocalHost(String pHostname, Integer pPort){
         hostname = pHostname;
         port = pPort;
     }

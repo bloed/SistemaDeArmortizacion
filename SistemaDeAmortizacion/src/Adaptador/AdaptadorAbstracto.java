@@ -1,19 +1,12 @@
 package Adaptador;
 
-import DTOs.DTOAdaptador;
-import java.net.Socket;
-
 
 public abstract class AdaptadorAbstracto {
-    protected String hostname;
-    protected Integer port;
-    protected Socket socket;
+
     
-    public AdaptadorAbstracto (DTOAdaptador dto ) {
-        hostname = dto.getHostName();
-        port = dto.getPort();
-    }
-    public String leerSocket() throws Exception{
+    public AdaptadorAbstracto ( ) { }
+    
+    public String realizarPeticion() throws Exception{
         realizarConexion();
         String resultado =  obtenerInformacion();
         cerrarConexion();
