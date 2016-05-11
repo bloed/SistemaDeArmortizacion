@@ -1,11 +1,11 @@
 package DTOs;
 
 
-public class DTOAdaptadorPostHTTP {
+public class DTOAdaptadorGettHTTP {
     private String url;
     private String parametros;
     
-    public DTOAdaptadorPostHTTP (String pUrl, String pParametros){
+    public DTOAdaptadorGettHTTP (String pUrl, String pParametros){
         url = pUrl;
         parametros = pParametros;
     }

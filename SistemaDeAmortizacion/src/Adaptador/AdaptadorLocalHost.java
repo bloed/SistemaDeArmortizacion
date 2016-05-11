@@ -45,6 +45,5 @@ public class AdaptadorLocalHost extends AdaptadorAbstracto{
         catch (Exception e){
             throw e;
         }
-    }
-    
+    }  
 }

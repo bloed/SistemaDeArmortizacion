@@ -1,31 +1,32 @@
 package Adaptador;
 
-import DTOs.DTOAdaptadorPostHTTP;
+import DTOs.DTOAdaptadorGettHTTP;
 import java.io.BufferedReader;
-import java.io.DataOutputStream;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-public class AdaptadorPostHTTP extends AdaptadorAbstracto {
+public class AdaptadorGetHTTP extends AdaptadorAbstracto {
     private HttpURLConnection conexion; 
     private String url;
     private String parametros;
+    private String tipo;
     
-    public AdaptadorPostHTTP(DTOAdaptadorPostHTTP dto){
+    public AdaptadorGetHTTP(DTOAdaptadorGettHTTP dto){
         url = dto.getUrl();
         parametros = dto.getParametros();
+        tipo = "GET";
     }
 
     @Override
     protected void realizarConexion() throws Exception {
         try{
-            URL urlObjetivo = new URL(url);
+            URL urlObjetivo = new URL(url+parametros);
             conexion = (HttpURLConnection)urlObjetivo.openConnection();
-            conexion.setRequestMethod("POST");
+            conexion.setRequestMethod(tipo);
             conexion.setRequestProperty("Content-Type", 
-                "application/x-www-form-urlencoded");
+                "text/xml; charset=utf-8");
 
             conexion.setRequestProperty("Content-Length", 
                 Integer.toString(parametros.getBytes().length));
@@ -33,7 +34,6 @@ public class AdaptadorPostHTTP extends AdaptadorAbstracto {
 
             conexion.setUseCaches(false);
             conexion.setDoOutput(true);
-            mandarInformacion();
         }
         catch(Exception e){
             throw e;
@@ -57,19 +57,6 @@ public class AdaptadorPostHTTP extends AdaptadorAbstracto {
             throw e;
         }
     }
-    
-    protected void mandarInformacion() throws Exception{
-        try{
-            DataOutputStream escritor = new DataOutputStream (
-            conexion.getOutputStream());
-            escritor.writeBytes(parametros);
-            escritor.close();
-        }
-        catch(Exception e){
-            cerrarConexion();
-            throw e;
-        }
-    }
 
     @Override
     protected void cerrarConexion() throws Exception {
@@ -77,7 +64,6 @@ public class AdaptadorPostHTTP extends AdaptadorAbstracto {
             conexion.disconnect();
         }
         catch(Exception e){
-            cerrarConexion();
             throw e;
         }
     }
