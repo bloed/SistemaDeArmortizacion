@@ -5,7 +5,7 @@ public abstract class AdaptadorAbstracto {
 
     
     public AdaptadorAbstracto ( ) { }
-    
+    //por aahora no se usa
     public String realizarPeticion() throws Exception{
         realizarConexion();
         String resultado =  obtenerInformacion();

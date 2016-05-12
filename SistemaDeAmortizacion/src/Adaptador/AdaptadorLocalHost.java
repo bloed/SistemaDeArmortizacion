@@ -5,19 +5,18 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.Socket;
 
-public class AdaptadorLocalHost extends AdaptadorAbstracto{
-
+public class AdaptadorLocalHost implements IAdaptador{
+    //se usara para conectarse con el backend chuky
     private String hostname;
     private Integer port;
-    private Socket socket;
+    private Socket socket; //creamos socket con java y conectamos socket externo
     
     public AdaptadorLocalHost (DTOAdaptadorLocalHost dto) {
         hostname = dto.getHostName();
         port = dto.getPort();
     }
 
-    @Override
-    protected void realizarConexion() throws Exception{
+    private void realizarConexion() throws Exception{
         try {
             socket = new Socket(hostname,port);
         } 
@@ -26,8 +25,7 @@ public class AdaptadorLocalHost extends AdaptadorAbstracto{
         }
     }
 
-    @Override
-    protected String obtenerInformacion() throws Exception{
+    private String obtenerInformacion() throws Exception{
         try {
             BufferedReader reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             return reader.readLine();
@@ -37,8 +35,7 @@ public class AdaptadorLocalHost extends AdaptadorAbstracto{
         }
     }  
 
-    @Override
-    protected void cerrarConexion() throws Exception {
+    private void cerrarConexion() throws Exception {
         try {
             socket.close();
         } 
@@ -46,4 +43,12 @@ public class AdaptadorLocalHost extends AdaptadorAbstracto{
             throw e;
         }
     }  
+
+    @Override
+    public String realizarPeticion() throws Exception {
+        realizarConexion();
+        String resultado =  obtenerInformacion();
+        cerrarConexion();
+        return resultado;
+    }
 }

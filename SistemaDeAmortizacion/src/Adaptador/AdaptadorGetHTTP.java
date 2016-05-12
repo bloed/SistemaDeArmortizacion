@@ -1,13 +1,15 @@
 package Adaptador;
 
 import DTOs.DTOAdaptadorGettHTTP;
-import java.io.BufferedReader;
 import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-public class AdaptadorGetHTTP extends AdaptadorAbstracto {
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import org.w3c.dom.Document;
+
+public abstract class AdaptadorGetHTTP implements IAdaptador {
     private HttpURLConnection conexion; 
     private String url;
     private String parametros;
@@ -19,7 +21,6 @@ public class AdaptadorGetHTTP extends AdaptadorAbstracto {
         tipo = "GET";
     }
 
-    @Override
     protected void realizarConexion() throws Exception {
         try{
             URL urlObjetivo = new URL(url+parametros);
@@ -40,17 +41,15 @@ public class AdaptadorGetHTTP extends AdaptadorAbstracto {
         }
     }
 
-    @Override
-    protected String obtenerInformacion() throws Exception {
+    protected Document obtenerInformacion() throws Exception {
+        //devuelve un XML  ya que es el formato de datos del web service
         try{
             InputStream stream = conexion.getInputStream();
-            BufferedReader lector = new BufferedReader(new InputStreamReader(stream));
-            String resultado = "";
-            String line;
-            while((line = lector.readLine()) != null) {
-                resultado += line + "\n";
-            }
-            return resultado;
+
+            DocumentBuilderFactory fabrica = DocumentBuilderFactory.newInstance();
+            DocumentBuilder constructorXML = fabrica.newDocumentBuilder();
+            Document xml = constructorXML.parse(stream);
+            return xml;
         }
         catch(Exception e){
             cerrarConexion();
@@ -58,7 +57,6 @@ public class AdaptadorGetHTTP extends AdaptadorAbstracto {
         }
     }
 
-    @Override
     protected void cerrarConexion() throws Exception {
         try{
             conexion.disconnect();
@@ -67,4 +65,8 @@ public class AdaptadorGetHTTP extends AdaptadorAbstracto {
             throw e;
         }
     }
+
+    public abstract String procesarXml(Document pXml);
+    //se implementa para cada subclase dependiendo de qué se requiere del XML
+    
 }
