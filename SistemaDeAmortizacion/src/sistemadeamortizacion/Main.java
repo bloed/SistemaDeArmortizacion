@@ -46,6 +46,7 @@ public class Main {
         IVista vista = new Consola();
         
         vista.mostrarPantallaInicial();
+        vista.validarEntradaDatos();
         vista.mostrarPantallaFinal(null);
     }
         
