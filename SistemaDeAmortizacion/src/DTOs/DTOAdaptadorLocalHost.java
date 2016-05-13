@@ -1,6 +1,7 @@
 package DTOs;
 
 public class DTOAdaptadorLocalHost {
+    //dto para constructor de la clase AdaptadorLocalHost
     private String hostname;
     private Integer port;
     

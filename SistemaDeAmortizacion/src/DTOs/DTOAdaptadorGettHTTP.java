@@ -2,6 +2,7 @@ package DTOs;
 
 
 public class DTOAdaptadorGettHTTP {
+    //dto para constructor de la clase AdaptadorGetHTTP
     private String url;
     private String parametros;
     

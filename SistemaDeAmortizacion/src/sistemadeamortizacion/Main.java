@@ -2,11 +2,12 @@ package sistemadeamortizacion;
 
 
 import Adaptador.AdaptadorLocalHost;
-import Adaptador.AdaptadorGetHTTP;
 import Adaptador.BCCRCambioDolar;
 import Adaptador.IAdaptador;
 import DTOs.DTOAdaptadorGettHTTP;
 import DTOs.DTOAdaptadorLocalHost;
+import Vista.Consola;
+import Vista.IVista;
 import java.net.URLEncoder;
 
 
@@ -40,7 +41,12 @@ public class Main {
             System.out.println(e.getMessage());
         }
                
-        System.out.println(resultado); 
+        System.out.println(resultado);
+        
+        IVista vista = new Consola();
+        
+        vista.mostrarPantallaInicial();
+        vista.mostrarPantallaFinal(null);
     }
         
         
