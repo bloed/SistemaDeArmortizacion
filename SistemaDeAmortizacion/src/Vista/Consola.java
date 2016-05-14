@@ -43,6 +43,7 @@ public class Consola implements IVista{
         sistemaArmotizacion = scanner.nextLine().toLowerCase();
         System.out.println("Ingresar moneda deseada: ");
         moneda =  scanner.nextLine().toLowerCase();
+        enviarDatos();
     }
 
     @Override
@@ -63,20 +64,26 @@ public class Consola implements IVista{
 
     @Override
     public void enviarDatos() {
-        //controlador.enviarVaras(dto)
+        if (validarEntradaDatos()){
+            //controlador.enviarVaras(dto)
+            System.out.println("Varas enviadas al controlador");
+            mostrarPantallaFinal(null);
+        }
     }
 
     @Override
-    public void validarEntradaDatos() throws Exception {
+    public Boolean validarEntradaDatos(){
         try{
             Validaciones.esDouble(montoPrestamo);
             Validaciones.esDouble(interesAnual);
             Validaciones.esInteger(periodosTotales);
             Validaciones.validarMoneda(moneda);
             Validaciones.validarSistema(sistemaArmotizacion);
+            return true;
         }
         catch (Exception e){
             mostrarError(e.getMessage());
+            return false;
         }
     }
     
