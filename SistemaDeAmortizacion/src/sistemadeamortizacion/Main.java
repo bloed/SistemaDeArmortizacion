@@ -6,6 +6,9 @@ import Adaptador.BCCRCambioDolar;
 import Adaptador.IAdaptador;
 import DTOs.DTOAdaptadorGettHTTP;
 import DTOs.DTOAdaptadorLocalHost;
+import DTOs.DTOVistaModelo;
+import Datos.Constantes;
+import Factory.Factory;
 import Vista.Consola;
 import Vista.GUI;
 import Vista.IVista;
@@ -49,7 +52,7 @@ public class Main {
         
         vista.mostrarPantallaInicial();
         vista.validarEntradaDatos();
-        vista.mostrarPantallaFinal(null);*/
+        vista.mostrarPantallaFinal(null);
         
         Boolean control = true;
         Scanner scanner = new Scanner(System.in);
@@ -73,7 +76,7 @@ public class Main {
             else{
                 System.out.println("Opción incorrecta.");
             }
-        }
+        }*/
     }
     public static void imprimirMenuPrincipal(){
         System.out.println("Sistema de Armotizacion");
