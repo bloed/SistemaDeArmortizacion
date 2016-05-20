@@ -7,7 +7,6 @@ package Modelo.Sistemas;
 
 import Adaptador.AdaptadorLocalHost;
 import Adaptador.BCCRCambioDolar;
-import Adaptador.IAdaptador;
 import DTOs.DTOCuota;
 import DTOs.DTOModeloVista;
 import DTOs.DTOSistemaAmortizacion;
@@ -17,7 +16,6 @@ import Modelo.Monedas.Moneda;
 import Observer.IObserver;
 import Observer.ISubject;
 import java.util.ArrayList;
-import java.util.Date;
 
 /**
  *
@@ -71,7 +69,6 @@ public abstract class SistemaAmortizacion implements ISubject{
         deudaActual = calcularDeudaCuota(periodo);
       cuotas[periodo] = new Cuota(new DTOCuota(deudaActual, amortizacion, cuota, intereses));
     }
-    int i = 0;
   }
  
   public DTOModeloVista obtenerDTO() {

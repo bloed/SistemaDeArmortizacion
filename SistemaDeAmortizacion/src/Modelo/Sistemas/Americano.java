@@ -6,7 +6,6 @@
 package Modelo.Sistemas;
 
 import DTOs.DTOSistemaAmortizacion;
-import Modelo.Cuotas.Cuota;
 
 /**
  *
@@ -19,23 +18,20 @@ public class Americano extends SistemaAmortizacion{
   }
 
   @Override
-  protected void calcularCuotas() {
-    throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-  }
-
-  @Override
   protected double calcularCuota(int periodo) {
-    throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    return this.deuda.getSaldo() * (1 + this.interes);
   }
 
   @Override
   protected double calcularAmortizacionCuota(int periodo) {
-    throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    if(periodo == this.plazo)
+      return this.deuda.getSaldo();
+    return 0;
   }
 
   @Override
   protected double calcularInteresesCuota(int periodo) {
-    throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    return this.interes * this.deuda.getSaldo();
   }
   
 }

@@ -5,10 +5,7 @@
  */
 package Modelo.Sistemas;
 
-import DTOs.DTOCuota;
 import DTOs.DTOSistemaAmortizacion;
-import Modelo.Cuotas.Cuota;
-import Observer.IObserver;
 
 /**
  *

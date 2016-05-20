@@ -12,6 +12,7 @@ import Datos.Constantes;
 import Factory.Factory;
 import Modelo.Monedas.Colon;
 import Modelo.Sistemas.Aleman;
+import Modelo.Sistemas.Americano;
 import Modelo.Sistemas.Frances;
 import Modelo.Sistemas.SistemaAmortizacion;
 import Vista.Consola;
@@ -31,7 +32,7 @@ public class Main {
 
     
     public static void main(String[] args) throws Exception {
-        SistemaAmortizacion s = new Frances(new DTOSistemaAmortizacion(5, 0.15, new Colon(1000000), "Aleman"));
+        SistemaAmortizacion s = new Americano(new DTOSistemaAmortizacion(5, 0.15, new Colon(1000000), "Aleman"));
         /*
         IAdaptador adaptador2 = new BCCRCambioDolar();
         String resultado = "";
