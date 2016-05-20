@@ -14,18 +14,25 @@ import Modelo.Cuotas.Cuota;
  */
 public class Frances extends SistemaAmortizacion{
 
-  public Frances(DTOSistemaAmortizacion dto) {
+  public Frances(DTOSistemaAmortizacion dto) throws Exception {
     super(dto);
   }
 
   @Override
-  protected void calcularCuotas() {
-    throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+  protected double calcularCuota(int periodo) {
+    return ((this.deuda.getSaldo()*this.interes)/(1-Math.pow((1+this.interes),-plazo)));
   }
 
   @Override
-  protected void calcularCuota(Cuota anterior) {
-    throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+  protected double calcularAmortizacionCuota(int periodo) {
+    return calcularCuota(periodo) - calcularInteresesCuota(periodo);
+  }
+
+  @Override
+  protected double calcularInteresesCuota(int periodo) {
+    if(periodo==0)
+      return this.interes * this.deuda.getSaldo();
+    return this.interes * (cuotas[periodo-1].getDeuda()-cuotas[periodo-1].getAmortizacion());
   }
   
 }

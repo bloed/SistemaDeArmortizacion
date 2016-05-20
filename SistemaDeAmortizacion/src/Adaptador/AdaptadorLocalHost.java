@@ -11,7 +11,11 @@ public class AdaptadorLocalHost implements IAdaptador{
     private Integer port;
     private Socket socket; //creamos socket con java y conectamos socket externo
     
-    public AdaptadorLocalHost (DTOAdaptadorLocalHost dto) {
+    public AdaptadorLocalHost(){
+      this(new DTOAdaptadorLocalHost("localhost",8666));
+    }
+    
+    protected AdaptadorLocalHost (DTOAdaptadorLocalHost dto) {
         hostname = dto.getHostName();
         port = dto.getPort();
     }

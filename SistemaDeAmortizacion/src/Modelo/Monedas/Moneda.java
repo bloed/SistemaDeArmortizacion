@@ -19,4 +19,12 @@ public abstract class Moneda {
     this.saldo = dto.getSaldo();
     this.tipo = dto.getTipo();
   }
+
+  public double getSaldo() {
+    return saldo;
+  }
+
+  public String getTipo() {
+    return tipo;
+  }
 }

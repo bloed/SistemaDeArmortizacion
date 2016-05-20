@@ -5,6 +5,7 @@
  */
 package Modelo.Sistemas;
 
+import DTOs.DTOCuota;
 import DTOs.DTOSistemaAmortizacion;
 import Modelo.Cuotas.Cuota;
 import Observer.IObserver;
@@ -15,18 +16,26 @@ import Observer.IObserver;
  */
 public class Aleman extends SistemaAmortizacion{
 
-  public Aleman(DTOSistemaAmortizacion dto) {
+  public Aleman(DTOSistemaAmortizacion dto) throws Exception {
     super(dto);
   }
-
+  
+  
   @Override
-  protected void calcularCuotas() {
-    throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+  protected double calcularCuota(int periodo) {
+    if(periodo == 0)
+      return (this.deuda.getSaldo()/this.plazo)+(this.interes*this.deuda.getSaldo());
+    return cuotas[periodo-1].getPago() - this.interes*this.deuda.getSaldo()/this.plazo;
   }
 
   @Override
-  protected void calcularCuota(Cuota anterior) {
-    throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+  protected double calcularAmortizacionCuota(int periodo) {
+    return this.deuda.getSaldo()/this.plazo;
+  }
+
+  @Override
+  protected double calcularInteresesCuota(int periodo) {
+    return (this.plazo - periodo)*(this.deuda.getSaldo()*this.interes)/this.plazo;
   }
   
 }

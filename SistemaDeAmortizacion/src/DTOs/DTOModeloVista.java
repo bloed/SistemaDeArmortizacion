@@ -1,21 +1,22 @@
 package DTOs;
 
 import Modelo.Cuotas.Cuota;
+import Modelo.Monedas.Moneda;
 
 
 public class DTOModeloVista {
     private String nombreCliente;
-    private double montoPrestamo;
+    private Moneda deuda;
     private int plazoPrestamo;
     private double interes;
     private String tipoSistema;
     private Cuota[] cuotas;
 
-  public DTOModeloVista(String nombreCliente, double montoPrestamo, 
+  public DTOModeloVista(String nombreCliente, Moneda deuda, 
           int plazoPrestamo, double interes, String tipoSistema, 
           Cuota[] cuotas) {
     this.nombreCliente = nombreCliente;
-    this.montoPrestamo = montoPrestamo;
+    this.deuda = deuda;
     this.plazoPrestamo = plazoPrestamo;
     this.interes = interes;
     this.tipoSistema = tipoSistema;
@@ -26,8 +27,8 @@ public class DTOModeloVista {
     return nombreCliente;
   }
 
-  public double getMontoPrestamo() {
-    return montoPrestamo;
+  public Moneda getDeuda() {
+    return deuda;
   }
 
   public int getPlazoPrestamo() {

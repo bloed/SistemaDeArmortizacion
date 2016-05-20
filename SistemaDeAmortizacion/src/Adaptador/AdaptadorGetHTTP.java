@@ -15,7 +15,8 @@ public abstract class AdaptadorGetHTTP implements IAdaptador {
     private String parametros;
     private String tipo;
     
-    public AdaptadorGetHTTP(DTOAdaptadorGettHTTP dto){
+    public AdaptadorGetHTTP(){}
+    protected AdaptadorGetHTTP(DTOAdaptadorGettHTTP dto){
         url = dto.getUrl();
         parametros = dto.getParametros();
         tipo = "GET";
@@ -66,7 +67,7 @@ public abstract class AdaptadorGetHTTP implements IAdaptador {
         }
     }
 
-    public abstract String procesarXml(Document pXml);
+    protected abstract String procesarXml(Document pXml);
     //se implementa para cada subclase dependiendo de qué se requiere del XML
     
 }

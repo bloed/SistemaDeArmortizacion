@@ -14,7 +14,7 @@ import Modelo.Cuotas.Cuota;
  */
 public class Americano extends SistemaAmortizacion{
 
-  public Americano(DTOSistemaAmortizacion dto) {
+  public Americano(DTOSistemaAmortizacion dto) throws Exception {
     super(dto);
   }
 
@@ -24,7 +24,17 @@ public class Americano extends SistemaAmortizacion{
   }
 
   @Override
-  protected void calcularCuota(Cuota anterior) {
+  protected double calcularCuota(int periodo) {
+    throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+  }
+
+  @Override
+  protected double calcularAmortizacionCuota(int periodo) {
+    throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+  }
+
+  @Override
+  protected double calcularInteresesCuota(int periodo) {
     throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
   }
   

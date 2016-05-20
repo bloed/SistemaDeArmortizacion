@@ -16,18 +16,17 @@ import Modelo.Monedas.Moneda;
 public class DTOSistemaAmortizacion {
   protected int plazo;
   protected double interes;
-  protected double monto;
-  protected String tipoProducto;
+  protected String tipoSistema;
   protected Cliente cliente;
   protected Cuota[] cuotas;
   protected Moneda deuda;
 
 
-  public DTOSistemaAmortizacion(int plazo, double interes, double monto, String tipoProducto) {
+  public DTOSistemaAmortizacion(int plazo, double interes, Moneda deuda, String tipoSistema) {
     this.plazo = plazo;
     this.interes = interes;
-    this.monto = monto;
-    this.tipoProducto = tipoProducto;
+    this.deuda = deuda;
+    this.tipoSistema = tipoSistema;
   }
 
   public int getPlazo() {
@@ -38,12 +37,8 @@ public class DTOSistemaAmortizacion {
     return interes;
   }
 
-  public double getMonto() {
-    return monto;
-  }
-
-  public String getTipoProducto() {
-    return tipoProducto;
+  public String getTipoSistema() {
+    return tipoSistema;
   }
   
   public Cliente getCliente() {
