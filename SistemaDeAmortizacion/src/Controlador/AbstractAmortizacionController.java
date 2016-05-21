@@ -3,8 +3,9 @@ package Controlador;
 import DTOs.DTOModeloVista;
 import DTOs.DTOSistemaAmortizacion;
 import DTOs.DTOVistaModelo;
-import Datos.Bitacora;
-import Datos.BitacoraXML;
+import Datos.Bitacora.BitacoraXML;
+import Datos.Bitacora.Bitacora;
+import Datos.Bitacora.BitacoraCSV;
 import Modelo.Monedas.Colon;
 import Modelo.Sistemas.Americano;
 import Modelo.Sistemas.SistemaAmortizacion;
@@ -23,8 +24,10 @@ public abstract class AbstractAmortizacionController implements IObserver{
     }
     protected void actualizarBitacora(DTOModeloVista dto){
         try{
-            Bitacora bitacora = new BitacoraXML("Bitacora.xml");
-            bitacora.escribir(dto);
+            Bitacora bitacoraXML = new BitacoraXML("Bitacora.xml");
+            bitacoraXML.escribir(dto);
+            Bitacora bitacoraCSV = new BitacoraCSV("Bitacora.csv");
+            bitacoraCSV.escribir(dto);
         }
         catch(Exception e){
             vista.mostrarError(e.getMessage());

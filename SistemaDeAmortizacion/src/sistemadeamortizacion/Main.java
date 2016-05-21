@@ -8,8 +8,9 @@ import DTOs.DTOAdaptadorGettHTTP;
 import DTOs.DTOAdaptadorLocalHost;
 import DTOs.DTOSistemaAmortizacion;
 import DTOs.DTOVistaModelo;
-import Datos.Bitacora;
-import Datos.BitacoraXML;
+import Datos.Bitacora.Bitacora;
+import Datos.Bitacora.BitacoraCSV;
+import Datos.Bitacora.BitacoraXML;
 import Datos.Constantes;
 import Factory.Factory;
 import Modelo.Monedas.Colon;
@@ -36,7 +37,7 @@ public class Main {
     
     public static void main(String[] args) throws Exception {
       SistemaAmortizacion s = new Americano(new DTOSistemaAmortizacion("Fernando", 5, 0.15, new Colon(1000000), "Aleman"));
-      Bitacora b = new BitacoraXML("C:\\Users\\fm010\\Documents\\Bitacora.xml");
+      Bitacora b = new BitacoraCSV("C:\\Users\\fm010\\Documents\\Bitacora.csv");
       b.escribir(s.obtenerDTO());
         /*
         

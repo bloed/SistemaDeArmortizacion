@@ -1,4 +1,5 @@
-package Datos;
+package Datos.Bitacora;
+
 
 import DTOs.DTOModeloVista;
 
