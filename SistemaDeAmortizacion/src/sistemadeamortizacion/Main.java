@@ -39,21 +39,6 @@ public class Main {
       Bitacora b = new BitacoraXML("C:\\Users\\fm010\\Documents\\Bitacora.xml");
       b.escribir(s.obtenerDTO());
         /*
-        IAdaptador adaptador2 = new BCCRCambioDolar();
-        String resultado = "";
-        try{
-            resultado = adaptador2.realizarPeticion();
-        }
-        catch(Exception e){
-            System.out.println(e.getMessage());
-        }
-               
-        System.out.println(resultado);
-        IVista vista = new Consola();
-        
-        vista.mostrarPantallaInicial();
-        vista.validarEntradaDatos();
-        vista.mostrarPantallaFinal(null);
         
         Boolean control = true;
         Scanner scanner = new Scanner(System.in);

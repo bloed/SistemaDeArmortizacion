@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Modelo.Sistemas;
 
 import Adaptador.AdaptadorLocalHost;
@@ -17,10 +12,6 @@ import Observer.IObserver;
 import Observer.ISubject;
 import java.util.ArrayList;
 
-/**
- *
- * @author fm010
- */
 public abstract class SistemaAmortizacion implements ISubject{
   protected int plazo;
   protected double interes;

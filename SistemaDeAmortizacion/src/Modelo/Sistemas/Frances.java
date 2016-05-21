@@ -1,17 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Modelo.Sistemas;
 
 import DTOs.DTOSistemaAmortizacion;
 import Modelo.Cuotas.Cuota;
 
-/**
- *
- * @author fm010
- */
 public class Frances extends SistemaAmortizacion{
 
   public Frances(DTOSistemaAmortizacion dto) throws Exception {

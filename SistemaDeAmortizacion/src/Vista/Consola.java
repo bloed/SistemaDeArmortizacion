@@ -1,6 +1,9 @@
 package Vista;
 
+import Controlador.AbstractAmortizacionController;
+import Controlador.ArmotizacionController;
 import DTOs.DTOModeloVista;
+import DTOs.DTOVistaModelo;
 import java.util.Scanner;
 import Validaciones.Validaciones;
 
@@ -13,6 +16,7 @@ public class Consola implements IVista{
     private String sistemaArmotizacion;
     private String moneda;
     Scanner scanner;
+    private AbstractAmortizacionController controlador;
     
     public Consola(){
         nombreCliente = "";
@@ -22,6 +26,7 @@ public class Consola implements IVista{
         sistemaArmotizacion = "";
         moneda = "";
         scanner = new Scanner(System.in);
+        controlador = new ArmotizacionController(this);
     }
     
     @Override
@@ -65,9 +70,9 @@ public class Consola implements IVista{
     @Override
     public void enviarDatos() {
         if (validarEntradaDatos()){
-            //controlador.enviarVaras(dto)
-            System.out.println("Varas enviadas al controlador");
-            mostrarPantallaFinal(null);
+            controlador.crearSistemaArmotizacion(new DTOVistaModelo(
+                nombreCliente, Double.parseDouble(montoPrestamo), Integer.parseInt(periodosTotales),
+                    Double.parseDouble(interesAnual), sistemaArmotizacion, moneda));    
         }
     }
 

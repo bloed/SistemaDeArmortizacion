@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Datos;
 import DTOs.DTOCuota;
 import DTOs.DTOModeloVista;
@@ -30,10 +25,7 @@ import javax.xml.transform.TransformerConfigurationException;
 import javax.xml.transform.TransformerException;
 import javax.xml.transform.stream.StreamSource;
 import org.xml.sax.SAXException;
-/**
- *
- * @author fm010
- */
+
 public class BitacoraXML extends Bitacora{
   private Document documento;
   private File archivo;

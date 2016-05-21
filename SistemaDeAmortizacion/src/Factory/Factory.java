@@ -1,17 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Factory;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 
-/**
- *
- * @author fm010
- * @param
- */
+
 public class Factory
     {
         public static <T> T Crear(String id, Object... parametros) throws InstantiationException

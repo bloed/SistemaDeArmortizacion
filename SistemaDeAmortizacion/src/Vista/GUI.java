@@ -1,13 +1,17 @@
 package Vista;
 
+import Controlador.AbstractAmortizacionController;
+import Controlador.ArmotizacionController;
 import DTOs.DTOModeloVista;
+import DTOs.DTOVistaModelo;
 import Validaciones.Validaciones;
 import javax.swing.JOptionPane;
 
 public class GUI extends javax.swing.JFrame implements IVista{
 
-    
+    private AbstractAmortizacionController controlador;
     public GUI() {
+        controlador = new ArmotizacionController(this);
         initComponents();
     }
 
@@ -361,9 +365,9 @@ public class GUI extends javax.swing.JFrame implements IVista{
     @Override
     public void enviarDatos() {
         if (validarEntradaDatos()){
-            //controlador.enviarVaras(dto)
-            System.out.println("Varas enviadas al controlador");
-            mostrarPantallaFinal(null);
+            controlador.crearSistemaArmotizacion(new DTOVistaModelo(
+                this.txt_NombreCliente.getText(), Double.parseDouble(this.txt_Prestamo.getText()), Integer.parseInt(this.txt_PeriodosTotales.getText()),
+                    Double.parseDouble(this.txt_InteresAnaul.getText()), this.txt_SistemaArmotizacion.toString(), this.txt_Moneda.getText())); 
         }
     }
 
