@@ -6,6 +6,7 @@
 package Modelo.Monedas;
 
 import DTOs.DTOMoneda;
+import java.text.DecimalFormat;
 
 /**
  *
@@ -26,5 +27,10 @@ public abstract class Moneda {
 
   public String getTipo() {
     return tipo;
+  }
+  
+  @Override
+  public String toString(){
+    return new DecimalFormat("#.##").format(this.saldo) + " " + tipo;
   }
 }

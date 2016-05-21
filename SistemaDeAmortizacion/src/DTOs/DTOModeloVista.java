@@ -11,16 +11,20 @@ public class DTOModeloVista {
     private double interes;
     private String tipoSistema;
     private Cuota[] cuotas;
+    private double tipoCambio;
+    private String fechaChucky;
 
   public DTOModeloVista(String nombreCliente, Moneda deuda, 
           int plazoPrestamo, double interes, String tipoSistema, 
-          Cuota[] cuotas) {
+          Cuota[] cuotas, double tipoCambio, String fechaChucky) {
     this.nombreCliente = nombreCliente;
     this.deuda = deuda;
     this.plazoPrestamo = plazoPrestamo;
     this.interes = interes;
     this.tipoSistema = tipoSistema;
     this.cuotas = cuotas;
+    this.tipoCambio = tipoCambio;
+    this.fechaChucky = fechaChucky;
   }
 
   public String getNombreCliente() {
@@ -46,6 +50,14 @@ public class DTOModeloVista {
   public Cuota[] getCuotas() {
     return cuotas;
   }
-    
+
+  public double getTipoCambio() {
+    return tipoCambio;
+  }
+
+  public String getFechaChucky() {
+    return fechaChucky;
+  }
+  
   
 }//85737569

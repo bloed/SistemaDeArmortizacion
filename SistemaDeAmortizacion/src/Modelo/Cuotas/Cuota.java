@@ -39,6 +39,10 @@ public class Cuota {
   public double getDeuda() {
     return deuda;
   }
+
+  public DTOCuota getDTO() {
+    return new DTOCuota(deuda, amortizacion, pago, interes);
+  }
   
   
   

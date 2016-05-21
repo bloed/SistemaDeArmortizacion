@@ -73,7 +73,7 @@ public abstract class SistemaAmortizacion implements ISubject{
  
   public DTOModeloVista obtenerDTO() {
     return new DTOModeloVista(cliente.getNombre(), deuda, plazo, interes, 
-            tipoSistema, cuotas);
+            tipoSistema, cuotas, tipoCambio, fechaChucky);
   }
 
   @Override

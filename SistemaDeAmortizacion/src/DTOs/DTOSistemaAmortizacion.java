@@ -6,6 +6,7 @@
 package DTOs;
 
 import Modelo.Clientes.Cliente;
+import Modelo.Clientes.Persona;
 import Modelo.Cuotas.Cuota;
 import Modelo.Monedas.Moneda;
 
@@ -22,7 +23,8 @@ public class DTOSistemaAmortizacion {
   protected Moneda deuda;
 
 
-  public DTOSistemaAmortizacion(int plazo, double interes, Moneda deuda, String tipoSistema) {
+  public DTOSistemaAmortizacion(String nombreCliente, int plazo, double interes, Moneda deuda, String tipoSistema) {
+    this.cliente = new Persona(nombreCliente);
     this.plazo = plazo;
     this.interes = interes;
     this.deuda = deuda;

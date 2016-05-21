@@ -24,7 +24,7 @@ public class Americano extends SistemaAmortizacion{
 
   @Override
   protected double calcularAmortizacionCuota(int periodo) {
-    if(periodo == this.plazo)
+    if(periodo == this.plazo-1)
       return this.deuda.getSaldo();
     return 0;
   }

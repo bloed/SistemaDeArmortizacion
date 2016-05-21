@@ -8,6 +8,8 @@ import DTOs.DTOAdaptadorGettHTTP;
 import DTOs.DTOAdaptadorLocalHost;
 import DTOs.DTOSistemaAmortizacion;
 import DTOs.DTOVistaModelo;
+import Datos.Bitacora;
+import Datos.BitacoraXML;
 import Datos.Constantes;
 import Factory.Factory;
 import Modelo.Monedas.Colon;
@@ -18,6 +20,7 @@ import Modelo.Sistemas.SistemaAmortizacion;
 import Vista.Consola;
 import Vista.GUI;
 import Vista.IVista;
+import java.io.File;
 import java.io.IOException;
 import java.net.URLEncoder;
 import java.text.DateFormat;
@@ -32,7 +35,9 @@ public class Main {
 
     
     public static void main(String[] args) throws Exception {
-        SistemaAmortizacion s = new Americano(new DTOSistemaAmortizacion(5, 0.15, new Colon(1000000), "Aleman"));
+      SistemaAmortizacion s = new Americano(new DTOSistemaAmortizacion("Fernando", 5, 0.15, new Colon(1000000), "Aleman"));
+      Bitacora b = new BitacoraXML("C:\\Users\\fm010\\Documents\\Bitacora.xml");
+      b.escribir(s.obtenerDTO());
         /*
         IAdaptador adaptador2 = new BCCRCambioDolar();
         String resultado = "";
