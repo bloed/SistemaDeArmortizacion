@@ -22,7 +22,7 @@ public abstract class AbstractAmortizacionController implements IObserver{
     protected void actualizarVista(DTOModeloVista dto){
         vista.mostrarPantallaFinal(dto);
     }
-    protected void actualizarBitacora(DTOModeloVista dto){
+    protected void actualizarBitacora(DTOModeloVista dto) throws Exception{
         try{
             Bitacora bitacoraXML = new BitacoraXML("Bitacora.xml");
             bitacoraXML.escribir(dto);
@@ -30,7 +30,7 @@ public abstract class AbstractAmortizacionController implements IObserver{
             bitacoraCSV.escribir(dto);
         }
         catch(Exception e){
-            vista.mostrarError(e.getMessage());
+            throw e;
         }
     }
     public void crearSistemaArmotizacion(DTOVistaModelo dto){
@@ -44,8 +44,13 @@ public abstract class AbstractAmortizacionController implements IObserver{
 
     @Override
     public <T> void update(T dto) {
-        DTOModeloVista dtoReal = (DTOModeloVista) dto;
-        actualizarBitacora(dtoReal);
-        actualizarVista(dtoReal);
+        try{
+            DTOModeloVista dtoReal = (DTOModeloVista) dto;
+            actualizarBitacora(dtoReal);
+            actualizarVista(dtoReal);
+        }
+        catch(Exception e){
+            vista.mostrarError(e.getMessage());
+        }
     }
 }
