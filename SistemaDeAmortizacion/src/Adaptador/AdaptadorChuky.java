@@ -5,20 +5,18 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.Socket;
 
-public class AdaptadorLocalHost implements IAdaptador{
+public class AdaptadorChuky implements IAdaptador{
     //se usara para conectarse con el backend chuky
     private String hostname;
     private Integer port;
     private Socket socket; //creamos socket con java y conectamos socket externo
     
-    public AdaptadorLocalHost(){
-      this(new DTOAdaptadorLocalHost("localhost",8666));
+    public AdaptadorChuky(){
+      hostname = "localhost";
+      port = 8666;
     }
     
-    protected AdaptadorLocalHost (DTOAdaptadorLocalHost dto) {
-        hostname = dto.getHostName();
-        port = dto.getPort();
-    }
+
 
     private void realizarConexion() throws Exception{
         try {

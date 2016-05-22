@@ -1,7 +1,7 @@
 package sistemadeamortizacion;
 
 
-import Adaptador.AdaptadorLocalHost;
+import Adaptador.AdaptadorChuky;
 import Adaptador.BCCRCambioDolar;
 import Adaptador.IAdaptador;
 import DTOs.DTOAdaptadorGettHTTP;

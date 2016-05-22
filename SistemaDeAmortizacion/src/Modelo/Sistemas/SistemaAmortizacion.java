@@ -1,6 +1,6 @@
 package Modelo.Sistemas;
 
-import Adaptador.AdaptadorLocalHost;
+import Adaptador.AdaptadorChuky;
 import Adaptador.BCCRCambioDolar;
 import DTOs.DTOCuota;
 import DTOs.DTOModeloVista;
@@ -32,8 +32,9 @@ public abstract class SistemaAmortizacion implements ISubject{
     this.cuotas = new Cuota[plazo];
     this.deuda = dto.getDeuda();
     this.tipoCambio = Double.parseDouble(new BCCRCambioDolar().realizarPeticion());
-    this.fechaChucky = new AdaptadorLocalHost().realizarPeticion();
+    this.fechaChucky = new AdaptadorChuky().realizarPeticion();
     calcularCuotas();
+    notifyObservers();
   }
   
   protected abstract double calcularCuota(int periodo);

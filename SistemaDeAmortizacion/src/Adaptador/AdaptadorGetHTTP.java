@@ -15,8 +15,8 @@ public abstract class AdaptadorGetHTTP implements IAdaptador {
     private String parametros;
     private String tipo;
     
-    public AdaptadorGetHTTP(){}
-    protected AdaptadorGetHTTP(DTOAdaptadorGettHTTP dto){
+    
+    public AdaptadorGetHTTP(DTOAdaptadorGettHTTP dto){
         url = dto.getUrl();
         parametros = dto.getParametros();
         tipo = "GET";
