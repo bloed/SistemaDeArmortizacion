@@ -1,5 +1,6 @@
 package Datos.Bitacora;
 
+import DTOs.DTOBitacora;
 import DTOs.DTOModeloVista;
 import Datos.Constantes;
 import java.io.BufferedReader;
@@ -15,8 +16,8 @@ import java.util.logging.Logger;
 public class BitacoraCSV extends Bitacora{
   private StringWriter escritor;
 
-  public BitacoraCSV(String path) {
-    super(path);
+  public BitacoraCSV(DTOBitacora dto) {
+    super(dto);
     this.escritor = new StringWriter();
   }
   

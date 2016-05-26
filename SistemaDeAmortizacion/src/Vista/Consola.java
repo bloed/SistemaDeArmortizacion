@@ -1,7 +1,7 @@
 package Vista;
 
 import Controlador.AbstractAmortizacionController;
-import Controlador.ArmotizacionController;
+import Controlador.AmortizacionController;
 import DTOs.DTOModeloVista;
 import DTOs.DTOVistaModelo;
 import java.util.Scanner;
@@ -26,7 +26,7 @@ public class Consola implements IVista{
         sistemaArmotizacion = "";
         moneda = "";
         scanner = new Scanner(System.in);
-        controlador = new ArmotizacionController(this);
+        controlador = new AmortizacionController(this);
     }
     
     @Override

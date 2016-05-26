@@ -1,38 +1,31 @@
 package Datos.Bitacora;
 
+import DTOs.DTOBitacora;
 import DTOs.DTOCuota;
 import DTOs.DTOModeloVista;
 import Modelo.Cuotas.Cuota;
-import java.io.ByteArrayInputStream;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
-import org.w3c.dom.Attr;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import java.io.File;
 import java.io.IOException;
-import java.io.StringReader;
-import java.io.StringWriter;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.OutputKeys;
-import javax.xml.transform.Source;
 import javax.xml.transform.TransformerConfigurationException;
 import javax.xml.transform.TransformerException;
-import javax.xml.transform.stream.StreamSource;
 import org.xml.sax.SAXException;
 
 public class BitacoraXML extends Bitacora{
   private Document documento;
   private File archivo;
 
-  public BitacoraXML(String path) throws Exception {
-    super(path);
+  public BitacoraXML(DTOBitacora dto) throws Exception {
+    super(dto);
     this.archivo = new File(path);
     try {
       this.documento = abrirDocumento();

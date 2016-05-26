@@ -1,7 +1,7 @@
 package Vista;
 
 import Controlador.AbstractAmortizacionController;
-import Controlador.ArmotizacionController;
+import Controlador.AmortizacionController;
 import DTOs.DTOModeloVista;
 import DTOs.DTOVistaModelo;
 import Validaciones.Validaciones;
@@ -11,7 +11,7 @@ public class GUI extends javax.swing.JFrame implements IVista{
 
     private AbstractAmortizacionController controlador;
     public GUI() {
-        controlador = new ArmotizacionController(this);
+        controlador = new AmortizacionController(this);
         initComponents();
     }
 

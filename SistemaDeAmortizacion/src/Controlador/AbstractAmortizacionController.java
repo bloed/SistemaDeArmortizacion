@@ -1,5 +1,6 @@
 package Controlador;
 
+import DTOs.DTOBitacora;
 import DTOs.DTOModeloVista;
 import DTOs.DTOSistemaAmortizacion;
 import DTOs.DTOVistaModelo;
@@ -24,9 +25,9 @@ public abstract class AbstractAmortizacionController implements IObserver{
     }
     protected void actualizarBitacora(DTOModeloVista dto) throws Exception{
         try{
-            Bitacora bitacoraXML = new BitacoraXML("Bitacora.xml");
+            Bitacora bitacoraXML = new BitacoraXML(new DTOBitacora("Bitacora.xml"));
             bitacoraXML.escribir(dto);
-            Bitacora bitacoraCSV = new BitacoraCSV("Bitacora.csv");
+            Bitacora bitacoraCSV = new BitacoraCSV(new DTOBitacora("Bitacora.csv"));
             bitacoraCSV.escribir(dto);
         }
         catch(Exception e){

@@ -24,7 +24,7 @@ public class DTOSistemaAmortizacion {
 
 
   public DTOSistemaAmortizacion(String nombreCliente, int plazo, double interes, Moneda deuda, String tipoSistema) {
-    this.cliente = new Persona(nombreCliente);
+    this.cliente = new Persona(new DTOCliente(nombreCliente));
     this.plazo = plazo;
     this.interes = interes;
     this.deuda = deuda;
