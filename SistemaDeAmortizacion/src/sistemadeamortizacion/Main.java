@@ -7,7 +7,7 @@ import Adaptador.IAdaptador;
 import DTOs.DTOAdaptadorGettHTTP;
 import DTOs.DTOAdaptadorLocalHost;
 import DTOs.DTOBitacora;
-import DTOs.DTOColon;
+import DTOs.DTOMoneda;
 import DTOs.DTOSistemaAmortizacion;
 import DTOs.DTOVistaModelo;
 import Datos.Bitacora.Bitacora;
@@ -38,7 +38,7 @@ public class Main {
 
     
     public static void main(String[] args) throws Exception {
-      SistemaAmortizacion s = new Americano(new DTOSistemaAmortizacion("Fernando", 5, 0.15, new Colon(new DTOColon(1000000)), "Aleman"));
+      SistemaAmortizacion s = new Americano(new DTOSistemaAmortizacion("Fernando", 5, 0.15, new Colon(new DTOMoneda(1000000)), "Aleman"));
       Bitacora b = new BitacoraCSV(new DTOBitacora("C:\\Users\\fm010\\Documents\\Bitacora.csv"));
       b.escribir(s.obtenerDTO());
         /*
@@ -76,6 +76,6 @@ public class Main {
     private static String obtenerFecha(){
       DateFormat dateFormat = new SimpleDateFormat("d/M/yyyy");
       Date date = new Date();
-      return dateFormat.format(date); //2014/08/06 15:59:48
+      return dateFormat.format(date); 
     }
 }

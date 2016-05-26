@@ -18,6 +18,10 @@ public class DTOMoneda {
     this.tipo = tipo;
   }
 
+  public DTOMoneda(double saldo) {
+    this.saldo = saldo;
+  }
+
   public double getSaldo() {
     return saldo;
   }
