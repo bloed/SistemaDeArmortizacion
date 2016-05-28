@@ -33,8 +33,6 @@ public abstract class SistemaAmortizacion implements ISubject{
     this.deuda = dto.getDeuda();
     this.tipoCambio = Double.parseDouble(new BCCRCambioDolar().realizarPeticion());
     this.fechaChucky = new AdaptadorChuky().realizarPeticion();
-    calcularCuotas();
-    notifyObservers();
   }
   
   protected abstract double calcularCuota(int periodo);
@@ -46,7 +44,7 @@ public abstract class SistemaAmortizacion implements ISubject{
     return cuotas[periodo-1].getDeuda() - cuotas[periodo-1].getAmortizacion();
   }
   
- protected void calcularCuotas() {
+ public void calcularCuotas() {
     double deudaActual;
     double cuota;
     double intereses;
@@ -61,6 +59,7 @@ public abstract class SistemaAmortizacion implements ISubject{
         deudaActual = calcularDeudaCuota(periodo);
       cuotas[periodo] = new Cuota(new DTOCuota(deudaActual, amortizacion, cuota, intereses));
     }
+    notifyObservers();
   }
  
   public DTOModeloVista obtenerDTO() {
@@ -84,4 +83,6 @@ public abstract class SistemaAmortizacion implements ISubject{
       observer.update(obtenerDTO());
     }
   }
+
+  
 }

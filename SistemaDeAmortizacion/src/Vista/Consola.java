@@ -4,6 +4,8 @@ import Controlador.AbstractAmortizacionController;
 import Controlador.AmortizacionController;
 import DTOs.DTOModeloVista;
 import DTOs.DTOVistaModelo;
+import Modelo.Cuotas.Cuota;
+import Modelo.Cuotas.CuotaConcreta;
 import java.util.Scanner;
 import Validaciones.Validaciones;
 
@@ -45,16 +47,16 @@ public class Consola implements IVista{
         System.out.println("Ingresar el internes anual :");
         interesAnual = scanner.nextLine();
         System.out.println("Ingresar el sistema de armotizacion deseado: ");
-        sistemaArmotizacion = scanner.nextLine().toLowerCase();
+        sistemaArmotizacion = scanner.nextLine();
         System.out.println("Ingresar moneda deseada: ");
-        moneda =  scanner.nextLine().toLowerCase();
+        moneda =  scanner.nextLine();
         enviarDatos();
     }
 
     @Override
     public void mostrarPantallaFinal(DTOModeloVista dto) {
         System.out.println();
-        System.out.println("Tipo de cambio compra BCCR: ");
+        System.out.println("Tipo de cambio compra BCCR: " + String.valueOf(dto.getTipoCambio()));
         System.out.println("Datos de la consulta:");
         System.out.println("Cliente: " + nombreCliente);
         System.out.println("Monto del préstamos otorgado: " + montoPrestamo
@@ -64,7 +66,9 @@ public class Consola implements IVista{
         System.out.println("Sistema de armotización: " + sistemaArmotizacion);
         System.out.println("");
         System.out.println("Tabla de Armotización");
+        System.out.println(CuotaConcreta.getCuotas(dto.getCuotas()));
         System.out.println("");
+        System.out.println("Chuky Date And Time: " + dto.getFechaChucky());
     }
 
     @Override

@@ -36,6 +36,18 @@ public class Cuota {
     return new DTOCuota(deuda, amortizacion, pago, interes);
   }
   
+  @Override
+  public String toString(){
+      return "   Deuda inicial " + deuda + "\n   Intereses: " + interes + 
+              "\n   Amortización: " + amortizacion + "\n   Cuota: " + pago;
+  }
+  public static String getCuotas(Cuota[] cuotas){
+        String resultado = "";
+        for (int periodo = 0; periodo < cuotas.length; periodo++) {
+            resultado += "\nPeriodo " + String.valueOf(periodo+1) + "\n" +cuotas[periodo].toString();
+        }
+        return resultado;
+  }
   
   
 }

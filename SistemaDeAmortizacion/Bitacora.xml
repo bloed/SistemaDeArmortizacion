@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Bitacora>
+    <Amortizacion>
+        <Cliente>Luis Chavarria</Cliente>
+        <Sistema>Luis Chavarria</Sistema>
+        <Deuda>1000000 Colon</Deuda>
+        <Plazo>5</Plazo>
+        <Interes>0.15</Interes>
+        <TipoCambio>544.36</TipoCambio>
+        <Fecha>Chucky Date and Time: Fri May 27 23:13:31 2016</Fecha>
+        <Cuotas>
+            <Cuota>
+                <Deuda>1000000.0</Deuda>
+                <Pago>350000.0</Pago>
+                <Amortizacion>200000.0</Amortizacion>
+                <Interes>150000.0</Interes>
+            </Cuota>
+            <Cuota>
+                <Deuda>800000.0</Deuda>
+                <Pago>320000.0</Pago>
+                <Amortizacion>200000.0</Amortizacion>
+                <Interes>120000.0</Interes>
+            </Cuota>
+            <Cuota>
+                <Deuda>600000.0</Deuda>
+                <Pago>290000.0</Pago>
+                <Amortizacion>200000.0</Amortizacion>
+                <Interes>90000.0</Interes>
+            </Cuota>
+            <Cuota>
+                <Deuda>400000.0</Deuda>
+                <Pago>260000.0</Pago>
+                <Amortizacion>200000.0</Amortizacion>
+                <Interes>60000.0</Interes>
+            </Cuota>
+            <Cuota>
+                <Deuda>200000.0</Deuda>
+                <Pago>230000.0</Pago>
+                <Amortizacion>200000.0</Amortizacion>
+                <Interes>30000.0</Interes>
+            </Cuota>
+        </Cuotas>
+    </Amortizacion>
+<Amortizacion>
+        <Cliente>Josue Arrieta</Cliente>
+        <Sistema>Josue Arrieta</Sistema>
+        <Deuda>1000000 Colon</Deuda>
+        <Plazo>5</Plazo>
+        <Interes>0.15</Interes>
+        <TipoCambio>544.36</TipoCambio>
+        <Fecha>Chucky Date and Time: Fri May 27 23:15:49 2016</Fecha>
+        <Cuotas>
+            <Cuota>
+                <Deuda>1000000.0</Deuda>
+                <Pago>350000.0</Pago>
+                <Amortizacion>200000.0</Amortizacion>
+                <Interes>150000.0</Interes>
+            </Cuota>
+            <Cuota>
+                <Deuda>800000.0</Deuda>
+                <Pago>320000.0</Pago>
+                <Amortizacion>200000.0</Amortizacion>
+                <Interes>120000.0</Interes>
+            </Cuota>
+            <Cuota>
+                <Deuda>600000.0</Deuda>
+                <Pago>290000.0</Pago>
+                <Amortizacion>200000.0</Amortizacion>
+                <Interes>90000.0</Interes>
+            </Cuota>
+            <Cuota>
+                <Deuda>400000.0</Deuda>
+                <Pago>260000.0</Pago>
+                <Amortizacion>200000.0</Amortizacion>
+                <Interes>60000.0</Interes>
+            </Cuota>
+            <Cuota>
+                <Deuda>200000.0</Deuda>
+                <Pago>230000.0</Pago>
+                <Amortizacion>200000.0</Amortizacion>
+                <Interes>30000.0</Interes>
+            </Cuota>
+        </Cuotas>
+    </Amortizacion>
+</Bitacora>

@@ -7,6 +7,7 @@ import Adaptador.IAdaptador;
 import DTOs.DTOAdaptadorGettHTTP;
 import DTOs.DTOAdaptadorLocalHost;
 import DTOs.DTOBitacora;
+import DTOs.DTOCliente;
 import DTOs.DTOMoneda;
 import DTOs.DTOSistemaAmortizacion;
 import DTOs.DTOVistaModelo;
@@ -15,7 +16,9 @@ import Datos.Bitacora.BitacoraCSV;
 import Datos.Bitacora.BitacoraXML;
 import Datos.Constantes;
 import Factory.Factory;
+import Modelo.Clientes.Cliente;
 import Modelo.Monedas.Colon;
+import Modelo.Monedas.Moneda;
 import Modelo.Sistemas.Aleman;
 import Modelo.Sistemas.Americano;
 import Modelo.Sistemas.Frances;
@@ -38,11 +41,6 @@ public class Main {
 
     
     public static void main(String[] args) throws Exception {
-      SistemaAmortizacion s = new Americano(new DTOSistemaAmortizacion("Fernando", 5, 0.15, new Colon(new DTOMoneda(1000000)), "Aleman"));
-      Bitacora b = new BitacoraCSV(new DTOBitacora("C:\\Users\\fm010\\Documents\\Bitacora.csv"));
-      b.escribir(s.obtenerDTO());
-        /*
-        
         Boolean control = true;
         Scanner scanner = new Scanner(System.in);
         String opcionElegida;
@@ -65,7 +63,7 @@ public class Main {
             else{
                 System.out.println("Opción incorrecta.");
             }
-        }*/
+        }
     }
     public static void imprimirMenuPrincipal(){
         System.out.println("Sistema de Armotizacion");

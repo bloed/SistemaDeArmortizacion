@@ -1,13 +1,18 @@
 package Controlador;
 
 import DTOs.DTOBitacora;
+import DTOs.DTOCliente;
 import DTOs.DTOModeloVista;
+import DTOs.DTOMoneda;
 import DTOs.DTOSistemaAmortizacion;
 import DTOs.DTOVistaModelo;
 import Datos.Bitacora.BitacoraXML;
 import Datos.Bitacora.Bitacora;
 import Datos.Bitacora.BitacoraCSV;
+import Factory.Factory;
+import Modelo.Clientes.Cliente;
 import Modelo.Monedas.Colon;
+import Modelo.Monedas.Moneda;
 import Modelo.Sistemas.Americano;
 import Modelo.Sistemas.SistemaAmortizacion;
 import Observer.IObserver;
@@ -36,7 +41,13 @@ public abstract class AbstractAmortizacionController implements IObserver{
     }
     public void crearSistemaArmotizacion(DTOVistaModelo dto){
         try{
-            //nadadamas crear a todos
+            Moneda moneda = Factory.Crear(Datos.Constantes.CLASEMONEDA+dto.getMoneda(), new DTOMoneda(dto.getMontoPrestamo(),dto.getMoneda()));
+            System.out.println(dto.getSistemaArmotizacion());
+            SistemaAmortizacion sistema = Factory.Crear(Datos.Constantes.CLASESISTEMA+dto.getSistemaArmotizacion(), 
+                    new DTOSistemaAmortizacion(dto.getNombreCliente(), dto.getPeriodosTotales(), 
+                            dto.getInteresAnual()/100, moneda, dto.getSistemaArmotizacion()));
+            sistema.attach(this);
+            sistema.calcularCuotas();
         }
         catch(Exception e){
             vista.mostrarError(e.getMessage());
