@@ -113,7 +113,7 @@
                   </Group>
               </Group>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jScrollPane1" alignment="1" pref="288" max="32767" attributes="0"/>
+                  <Component id="jScrollPane1" alignment="1" pref="284" max="32767" attributes="0"/>
                   <Group type="102" alignment="0" attributes="0">
                       <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -248,7 +248,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel7">
       <Properties>
-        <Property name="text" type="java.lang.String" value="[aleman | frances | americano]"/>
+        <Property name="text" type="java.lang.String" value="[Aleman | Frances | Americano]"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel8">
@@ -258,7 +258,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel9">
       <Properties>
-        <Property name="text" type="java.lang.String" value="[colones | dolares]"/>
+        <Property name="text" type="java.lang.String" value="[Colon | Dolar]"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txt_Prestamo">

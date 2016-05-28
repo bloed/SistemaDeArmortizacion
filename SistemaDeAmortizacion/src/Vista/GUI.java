@@ -4,6 +4,7 @@ import Controlador.AbstractAmortizacionController;
 import Controlador.AmortizacionController;
 import DTOs.DTOModeloVista;
 import DTOs.DTOVistaModelo;
+import Modelo.Cuotas.CuotaConcreta;
 import Validaciones.Validaciones;
 import javax.swing.JOptionPane;
 
@@ -103,11 +104,11 @@ public class GUI extends javax.swing.JFrame implements IVista{
 
         jLabel6.setText("Sistema de armotización:");
 
-        jLabel7.setText("[aleman | frances | americano]");
+        jLabel7.setText("[Aleman | Frances | Americano]");
 
         jLabel8.setText("Moneda:");
 
-        jLabel9.setText("[colones | dolares]");
+        jLabel9.setText("[Colon | Dolar]");
 
         txt_Prestamo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -185,7 +186,7 @@ public class GUI extends javax.swing.JFrame implements IVista{
                                 .addComponent(txt_Prestamo, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(18, 18, 18)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 288, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 284, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addGap(0, 0, Short.MAX_VALUE)))
@@ -348,7 +349,7 @@ public class GUI extends javax.swing.JFrame implements IVista{
         this.jLabel9.setVisible(false);
         
         String resultado = "";
-        resultado += "Tipo de cambio compra BCCR: \n";
+        resultado += "Tipo de cambio compra BCCR: " + String.valueOf(dto.getTipoCambio()) + "\n";
         resultado += "Datos de la consulta: \n";
         resultado += "Cliente: " + this.txt_NombreCliente.getText() + "\n";
         resultado += "Monto del préstamos otorgado: " + this.txt_Prestamo.getText()
@@ -356,9 +357,12 @@ public class GUI extends javax.swing.JFrame implements IVista{
         resultado += "Plazo del préstamo: " + this.txt_PeriodosTotales.getText() + " años \n";
         resultado += "Interés anual: " + this.txt_InteresAnaul.getText() + "% \n";
         resultado += "Sistema de armotización: " + this.txt_SistemaArmotizacion.getText() + " \n";
-        resultado += " \n";
+        resultado += "\n";
         resultado += "Tabla de Armotización \n";
-        resultado += " \n";
+        resultado += CuotaConcreta.getCuotas(dto.getCuotas());
+        resultado += "\n\n";
+        resultado += "Chuky Date And Time: " + dto.getFechaChucky();
+    
         this.txt_ResultadoFinales.append(resultado);
     }
 
@@ -367,7 +371,7 @@ public class GUI extends javax.swing.JFrame implements IVista{
         if (validarEntradaDatos()){
             controlador.crearSistemaArmotizacion(new DTOVistaModelo(
                 this.txt_NombreCliente.getText(), Double.parseDouble(this.txt_Prestamo.getText()), Integer.parseInt(this.txt_PeriodosTotales.getText()),
-                    Double.parseDouble(this.txt_InteresAnaul.getText()), this.txt_SistemaArmotizacion.toString(), this.txt_Moneda.getText())); 
+                    Double.parseDouble(this.txt_InteresAnaul.getText()), this.txt_SistemaArmotizacion.getText(), this.txt_Moneda.getText())); 
         }
     }
 

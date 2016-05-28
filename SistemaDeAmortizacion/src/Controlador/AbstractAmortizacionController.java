@@ -42,7 +42,6 @@ public abstract class AbstractAmortizacionController implements IObserver{
     public void crearSistemaArmotizacion(DTOVistaModelo dto){
         try{
             Moneda moneda = Factory.Crear(Datos.Constantes.CLASEMONEDA+dto.getMoneda(), new DTOMoneda(dto.getMontoPrestamo(),dto.getMoneda()));
-            System.out.println(dto.getSistemaArmotizacion());
             SistemaAmortizacion sistema = Factory.Crear(Datos.Constantes.CLASESISTEMA+dto.getSistemaArmotizacion(), 
                     new DTOSistemaAmortizacion(dto.getNombreCliente(), dto.getPeriodosTotales(), 
                             dto.getInteresAnual()/100, moneda, dto.getSistemaArmotizacion()));

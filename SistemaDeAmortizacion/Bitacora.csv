@@ -1,2 +1,5 @@
 NombreCliente;TipoSistema;Deuda;Plazo;Interes;TipoCambio;FechaChucky
+
 Josue Arrieta;Aleman;1000000 Colon;5;0.15;544.36;Chucky Date and Time: Fri May 27 23:15:49 2016;
+Luis;Aleman;1000000 Colon;5;0.15;544.17;Chucky Date and Time: Sat May 28 08:54:48 2016;
+Luis;Aleman;100000 Colon;5;0.15;544.17;Chucky Date and Time: Sat May 28 09:09:16 2016;
