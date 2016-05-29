@@ -11,6 +11,8 @@ public abstract class Moneda {
     this.saldo = dto.getSaldo();
     this.tipo = dto.getTipo();
   }
+  
+  public abstract Moneda toColon(double tipoCambio);
 
   public double getSaldo() {
     return saldo;

@@ -30,8 +30,8 @@ public abstract class SistemaAmortizacion implements ISubject{
     this.cliente = dto.getCliente();
     this.observers = new ArrayList<>();
     this.cuotas = new Cuota[plazo];
-    this.deuda = dto.getDeuda();
     this.tipoCambio = Double.parseDouble(new BCCRCambioDolar().realizarPeticion());
+    this.deuda = dto.getDeuda().toColon(tipoCambio);
     this.fechaChucky = new AdaptadorChuky().realizarPeticion();
   }
   

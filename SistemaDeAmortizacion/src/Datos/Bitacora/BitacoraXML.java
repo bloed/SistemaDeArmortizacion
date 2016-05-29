@@ -90,7 +90,7 @@ public class BitacoraXML extends Bitacora{
       Element nuevaCuota;
       DTOCuota dtoCuota;
       agregarNuevoHijoAElemento("Cliente", dto.getNombreCliente(), nuevaAmortizacion);
-      agregarNuevoHijoAElemento("Sistema", dto.getNombreCliente(), nuevaAmortizacion);
+      agregarNuevoHijoAElemento("Sistema", dto.getTipoSistema(), nuevaAmortizacion);
       agregarNuevoHijoAElemento("Deuda", dto.getDeuda().toString(), nuevaAmortizacion);
       agregarNuevoHijoAElemento("Plazo", String.valueOf(dto.getPlazoPrestamo()), nuevaAmortizacion);
       agregarNuevoHijoAElemento("Interes", String.valueOf(dto.getInteres()), nuevaAmortizacion);
