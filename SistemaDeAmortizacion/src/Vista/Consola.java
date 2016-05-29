@@ -60,7 +60,7 @@ public class Consola implements IVista{
         System.out.println("Datos de la consulta:");
         System.out.println("Cliente: " + nombreCliente);
         System.out.println("Monto del préstamos otorgado: " + montoPrestamo
-            + " de " + moneda);
+            + " de colones. Se muestra los resultados en  " + moneda);
         System.out.println("Plazo del préstamo: " + periodosTotales + " años");
         System.out.println("Interés anual: " + interesAnual + "%");
         System.out.println("Sistema de armotización: " + sistemaArmotizacion);

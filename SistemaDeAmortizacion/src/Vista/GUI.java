@@ -355,7 +355,7 @@ public class GUI extends javax.swing.JFrame implements IVista{
         resultado += "Datos de la consulta: \n";
         resultado += "Cliente: " + this.txt_NombreCliente.getText() + "\n";
         resultado += "Monto del préstamos otorgado: " + this.txt_Prestamo.getText()
-            + " de " + this.txt_Moneda.getText() + "\n";
+            + " de clones. Se muestran los resultados en " + this.txt_Moneda.getText() + "\n";
         resultado += "Plazo del préstamo: " + this.txt_PeriodosTotales.getText() + " años \n";
         resultado += "Interés anual: " + this.txt_InteresAnaul.getText() + "% \n";
         resultado += "Sistema de armotización: " + this.txt_SistemaArmotizacion.getText() + " \n";

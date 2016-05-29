@@ -11,7 +11,7 @@ public class Dolar extends Moneda{
 
   @Override
   public Moneda toColon(double tipoCambio) {
-    return new Colon(new DTOMoneda(this.saldo*tipoCambio));
+    return new Colon(new DTOMoneda(this.saldo/tipoCambio));
   }
 }
 

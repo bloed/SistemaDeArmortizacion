@@ -38,8 +38,8 @@ public class Cuota {
   
   @Override
   public String toString(){
-      return "   Deuda inicial " + deuda + "\n   Intereses: " + interes + 
-              "\n   Amortización: " + amortizacion + "\n   Cuota: " + pago;
+      return "   Deuda inicial " + Utilitario.Utilitario.truncate(deuda) + "\n   Intereses: " + Utilitario.Utilitario.truncate(interes) + 
+              "\n   Amortización: " + Utilitario.Utilitario.truncate(amortizacion) + "\n   Cuota: " + Utilitario.Utilitario.truncate(pago);
   }
   public static String getCuotas(Cuota[] cuotas){
     String resultado = "";
@@ -55,21 +55,21 @@ public class Cuota {
   private static String getTotalInteres(Cuota[] cuotas){
       Double resultado = 0.0;  
       for (Cuota cuota : cuotas) {
-          resultado += cuota.interes;
+          resultado += Utilitario.Utilitario.truncate(cuota.interes);
       }
       return resultado.toString();
   }
   private static String getTotalAmortizacion(Cuota[] cuotas){
       Double resultado = 0.0;  
       for (Cuota cuota : cuotas) {
-          resultado += cuota.amortizacion;
+          resultado += Utilitario.Utilitario.truncate(cuota.amortizacion);
       }
       return resultado.toString();
   }
   private static String getTotalPagos(Cuota[] cuotas){
       Double resultado = 0.0;  
       for (Cuota cuota : cuotas) {
-          resultado += cuota.pago;
+          resultado += Utilitario.Utilitario.truncate(cuota.pago);
       }
       return resultado.toString();
   }
