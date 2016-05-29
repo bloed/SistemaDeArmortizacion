@@ -48,9 +48,14 @@ public class AdaptadorChuky implements IAdaptador{
 
     @Override
     public String realizarPeticion() throws Exception {
-        realizarConexion();
-        String resultado =  obtenerInformacion();
-        cerrarConexion();
-        return resultado;
+        try{
+          realizarConexion();
+            String resultado =  obtenerInformacion();
+            cerrarConexion();
+            return resultado;
+        }
+        catch(Exception e){
+            return "0";
+        }
     }
 }

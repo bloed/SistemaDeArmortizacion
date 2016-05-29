@@ -9,3 +9,4 @@ public class Dolar extends Moneda{
     super(new DTOMoneda(dto.getSaldo(), Constantes.DOLAR));
   }
 }
+

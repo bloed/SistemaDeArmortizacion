@@ -24,10 +24,15 @@ public class BCCRCambioDolar extends AdaptadorGetHTTP{
   
   @Override
   public String realizarPeticion() throws Exception {
-      realizarConexion();
-      Document xml =  obtenerInformacion();
-      cerrarConexion();
-      return procesarXml(xml);
+      try{
+        realizarConexion();
+        Document xml =  obtenerInformacion();
+        cerrarConexion();
+        return procesarXml(xml);
+      }
+      catch(Exception e){
+          return "0";
+      }
   }
 
   @Override

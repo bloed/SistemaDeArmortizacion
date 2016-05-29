@@ -42,11 +42,36 @@ public class Cuota {
               "\n   Amortización: " + amortizacion + "\n   Cuota: " + pago;
   }
   public static String getCuotas(Cuota[] cuotas){
-        String resultado = "";
-        for (int periodo = 0; periodo < cuotas.length; periodo++) {
-            resultado += "\nPeriodo " + String.valueOf(periodo+1) + "\n" +cuotas[periodo].toString();
-        }
-        return resultado;
+    String resultado = "";
+    for (int periodo = 0; periodo < cuotas.length; periodo++) {
+        resultado += "\nPeriodo " + String.valueOf(periodo+1) + "\n" +cuotas[periodo].toString();
+    }
+    resultado += "\n Intereses totales : " + getTotalInteres(cuotas);
+    resultado += "\n Armotización total : " + getTotalAmortizacion(cuotas);
+    resultado += "\n Cuotas totales : " + getTotalPagos(cuotas);
+    return resultado;
+  }
+  
+  private static String getTotalInteres(Cuota[] cuotas){
+      Double resultado = 0.0;  
+      for (Cuota cuota : cuotas) {
+          resultado += cuota.interes;
+      }
+      return resultado.toString();
+  }
+  private static String getTotalAmortizacion(Cuota[] cuotas){
+      Double resultado = 0.0;  
+      for (Cuota cuota : cuotas) {
+          resultado += cuota.amortizacion;
+      }
+      return resultado.toString();
+  }
+  private static String getTotalPagos(Cuota[] cuotas){
+      Double resultado = 0.0;  
+      for (Cuota cuota : cuotas) {
+          resultado += cuota.pago;
+      }
+      return resultado.toString();
   }
   
   
