@@ -1,7 +1,6 @@
 package Controlador;
 
 import DTOs.DTOBitacora;
-import DTOs.DTOCliente;
 import DTOs.DTOModeloVista;
 import DTOs.DTOMoneda;
 import DTOs.DTOSistemaAmortizacion;
@@ -10,10 +9,7 @@ import Datos.Bitacora.BitacoraXML;
 import Datos.Bitacora.Bitacora;
 import Datos.Bitacora.BitacoraCSV;
 import Factory.Factory;
-import Modelo.Clientes.Cliente;
-import Modelo.Monedas.Colon;
 import Modelo.Monedas.Moneda;
-import Modelo.Sistemas.Americano;
 import Modelo.Sistemas.SistemaAmortizacion;
 import Observer.IObserver;
 import Vista.IVista;

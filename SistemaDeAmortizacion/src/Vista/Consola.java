@@ -4,7 +4,6 @@ import Controlador.AbstractAmortizacionController;
 import Controlador.AmortizacionController;
 import DTOs.DTOModeloVista;
 import DTOs.DTOVistaModelo;
-import Modelo.Cuotas.Cuota;
 import Modelo.Cuotas.CuotaConcreta;
 import java.util.Scanner;
 import Validaciones.Validaciones;

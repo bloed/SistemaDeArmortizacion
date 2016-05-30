@@ -1,7 +1,6 @@
 package Vista;
 
 import DTOs.DTOModeloVista;
-import DTOs.DTOVistaModelo;
 
 
 public interface IVista {

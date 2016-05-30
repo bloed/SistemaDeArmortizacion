@@ -11,7 +11,9 @@ public class Americano extends SistemaAmortizacion{
 
   @Override
   protected double calcularCuota(int periodo) {
-    return this.deuda.getSaldo() * (1 + this.interes);
+    if (periodo == this.plazo-1)
+      return this.deuda.getSaldo() * (1 + this.interes);
+    return this.interes * this.deuda.getSaldo();
   }
 
   @Override

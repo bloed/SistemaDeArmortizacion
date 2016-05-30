@@ -4,9 +4,6 @@ import DTOs.DTOAdaptadorGettHTTP;
 import Datos.Constantes;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import org.w3c.dom.Document;
 
 
@@ -14,7 +11,7 @@ public class BCCRCambioDolar extends AdaptadorGetHTTP{
 
   public BCCRCambioDolar() throws UnsupportedEncodingException{
     super(new DTOAdaptadorGettHTTP(Constantes.URLBCCR, 
-                                "tcIndicador=" + URLEncoder.encode("318", "UTF-8") +   
+                                "tcIndicador=" + URLEncoder.encode("317", "UTF-8") +   
                                 "&tcFechaInicio=" + URLEncoder.encode(Utilitario.Utilitario.obtenerFecha(), "UTF-8")+
                                 "&tcFechaFinal=" + URLEncoder.encode(Utilitario.Utilitario.obtenerFecha(), "UTF-8")+
                                 "&tcNombre=" + URLEncoder.encode("Josue Arrieta", "UTF-8")+
@@ -24,16 +21,12 @@ public class BCCRCambioDolar extends AdaptadorGetHTTP{
   
   @Override
   public String realizarPeticion() throws Exception {
-      try{
+      
         realizarConexion();
         Document xml =  obtenerInformacion();
         cerrarConexion();
         return procesarXml(xml);
-      }
-      catch(Exception e){
-          System.out.println(e.getMessage());
-          return "0";
-      }
+      
   }
 
   @Override

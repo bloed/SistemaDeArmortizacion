@@ -1,7 +1,6 @@
 package Modelo.Sistemas;
 
 import DTOs.DTOSistemaAmortizacion;
-import Modelo.Cuotas.Cuota;
 
 public class Frances extends SistemaAmortizacion{
 

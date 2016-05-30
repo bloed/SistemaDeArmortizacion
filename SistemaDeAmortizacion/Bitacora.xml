@@ -6,8 +6,8 @@
         <Deuda>1000000 Colon</Deuda>
         <Plazo>5</Plazo>
         <Interes>0.15</Interes>
-        <TipoCambio>0.0</TipoCambio>
-        <Fecha>Chucky Date and Time: Sun May 29 16:25:39 2016</Fecha>
+        <TipoCambio>531.69</TipoCambio>
+        <Fecha>Chucky Date and Time: Sun May 29 17:06:00 2016</Fecha>
         <Cuotas>
             <Cuota>
                 <Deuda>1000000.0</Deuda>
@@ -42,13 +42,54 @@
         </Cuotas>
     </Amortizacion>
 <Amortizacion>
-        <Cliente>Luis Javier Chavarría Sánchez</Cliente>
+        <Cliente>Luis Javier Chavarría Sanchéz</Cliente>
+        <Sistema>Aleman</Sistema>
+        <Deuda>1880.8 Colon</Deuda>
+        <Plazo>5</Plazo>
+        <Interes>0.15</Interes>
+        <TipoCambio>531.69</TipoCambio>
+        <Fecha>Chucky Date and Time: Sun May 29 17:07:09 2016</Fecha>
+        <Cuotas>
+            <Cuota>
+                <Deuda>1880.7952002106488</Deuda>
+                <Pago>658.2783200737271</Pago>
+                <Amortizacion>376.15904004212973</Amortizacion>
+                <Interes>282.1192800315973</Interes>
+            </Cuota>
+            <Cuota>
+                <Deuda>1504.636160168519</Deuda>
+                <Pago>601.8544640674075</Pago>
+                <Amortizacion>376.15904004212973</Amortizacion>
+                <Interes>225.69542402527787</Interes>
+            </Cuota>
+            <Cuota>
+                <Deuda>1128.4771201263893</Deuda>
+                <Pago>545.430608061088</Pago>
+                <Amortizacion>376.15904004212973</Amortizacion>
+                <Interes>169.2715680189584</Interes>
+            </Cuota>
+            <Cuota>
+                <Deuda>752.3180800842596</Deuda>
+                <Pago>489.0067520547686</Pago>
+                <Amortizacion>376.15904004212973</Amortizacion>
+                <Interes>112.84771201263894</Interes>
+            </Cuota>
+            <Cuota>
+                <Deuda>376.15904004212985</Deuda>
+                <Pago>432.58289604844913</Pago>
+                <Amortizacion>376.15904004212973</Amortizacion>
+                <Interes>56.42385600631947</Interes>
+            </Cuota>
+        </Cuotas>
+    </Amortizacion>
+<Amortizacion>
+        <Cliente>Luis Javier Chavarr�a S�nchez</Cliente>
         <Sistema>Aleman</Sistema>
         <Deuda>1000000 Colon</Deuda>
         <Plazo>5</Plazo>
         <Interes>0.15</Interes>
-        <TipoCambio>0.0</TipoCambio>
-        <Fecha>Chucky Date and Time: Sun May 29 16:28:17 2016</Fecha>
+        <TipoCambio>531.69</TipoCambio>
+        <Fecha>Chucky Date and Time: Sun May 29 17:09:20 2016</Fecha>
         <Cuotas>
             <Cuota>
                 <Deuda>1000000.0</Deuda>
@@ -85,82 +126,369 @@
 <Amortizacion>
         <Cliente>Luis Javier Chavarr�a S�nchez</Cliente>
         <Sistema>Aleman</Sistema>
-        <Deuda>1000000 Colon</Deuda>
+        <Deuda>1880.8 Colon</Deuda>
         <Plazo>5</Plazo>
         <Interes>0.15</Interes>
-        <TipoCambio>0.0</TipoCambio>
-        <Fecha>Chucky Date and Time: Sun May 29 16:28:52 2016</Fecha>
+        <TipoCambio>531.69</TipoCambio>
+        <Fecha>Chucky Date and Time: Sun May 29 17:10:21 2016</Fecha>
         <Cuotas>
             <Cuota>
-                <Deuda>1000000.0</Deuda>
-                <Pago>350000.0</Pago>
-                <Amortizacion>200000.0</Amortizacion>
-                <Interes>150000.0</Interes>
+                <Deuda>1880.7952002106488</Deuda>
+                <Pago>658.2783200737271</Pago>
+                <Amortizacion>376.15904004212973</Amortizacion>
+                <Interes>282.1192800315973</Interes>
             </Cuota>
             <Cuota>
-                <Deuda>800000.0</Deuda>
-                <Pago>320000.0</Pago>
-                <Amortizacion>200000.0</Amortizacion>
-                <Interes>120000.0</Interes>
+                <Deuda>1504.636160168519</Deuda>
+                <Pago>601.8544640674075</Pago>
+                <Amortizacion>376.15904004212973</Amortizacion>
+                <Interes>225.69542402527787</Interes>
             </Cuota>
             <Cuota>
-                <Deuda>600000.0</Deuda>
-                <Pago>290000.0</Pago>
-                <Amortizacion>200000.0</Amortizacion>
-                <Interes>90000.0</Interes>
+                <Deuda>1128.4771201263893</Deuda>
+                <Pago>545.430608061088</Pago>
+                <Amortizacion>376.15904004212973</Amortizacion>
+                <Interes>169.2715680189584</Interes>
             </Cuota>
             <Cuota>
-                <Deuda>400000.0</Deuda>
-                <Pago>260000.0</Pago>
-                <Amortizacion>200000.0</Amortizacion>
-                <Interes>60000.0</Interes>
+                <Deuda>752.3180800842596</Deuda>
+                <Pago>489.0067520547686</Pago>
+                <Amortizacion>376.15904004212973</Amortizacion>
+                <Interes>112.84771201263894</Interes>
             </Cuota>
             <Cuota>
-                <Deuda>200000.0</Deuda>
-                <Pago>230000.0</Pago>
-                <Amortizacion>200000.0</Amortizacion>
-                <Interes>30000.0</Interes>
+                <Deuda>376.15904004212985</Deuda>
+                <Pago>432.58289604844913</Pago>
+                <Amortizacion>376.15904004212973</Amortizacion>
+                <Interes>56.42385600631947</Interes>
             </Cuota>
         </Cuotas>
     </Amortizacion>
 <Amortizacion>
-        <Cliente>asf</Cliente>
-        <Sistema>Aleman</Sistema>
+        <Cliente>Luis Javier Chavarría Sánchez</Cliente>
+        <Sistema>Frances</Sistema>
         <Deuda>1000000 Colon</Deuda>
         <Plazo>5</Plazo>
         <Interes>0.15</Interes>
-        <TipoCambio>0.0</TipoCambio>
-        <Fecha>Chucky Date and Time: Sun May 29 16:29:33 2016</Fecha>
+        <TipoCambio>531.69</TipoCambio>
+        <Fecha>Chucky Date and Time: Sun May 29 17:17:42 2016</Fecha>
         <Cuotas>
             <Cuota>
                 <Deuda>1000000.0</Deuda>
-                <Pago>350000.0</Pago>
-                <Amortizacion>200000.0</Amortizacion>
+                <Pago>298315.5524615284</Pago>
+                <Amortizacion>148315.5524615284</Amortizacion>
                 <Interes>150000.0</Interes>
             </Cuota>
             <Cuota>
-                <Deuda>800000.0</Deuda>
-                <Pago>320000.0</Pago>
-                <Amortizacion>200000.0</Amortizacion>
-                <Interes>120000.0</Interes>
+                <Deuda>851684.4475384715</Deuda>
+                <Pago>298315.5524615284</Pago>
+                <Amortizacion>170562.88533075765</Amortizacion>
+                <Interes>127752.66713077073</Interes>
             </Cuota>
             <Cuota>
-                <Deuda>600000.0</Deuda>
-                <Pago>290000.0</Pago>
-                <Amortizacion>200000.0</Amortizacion>
-                <Interes>90000.0</Interes>
+                <Deuda>681121.562207714</Deuda>
+                <Pago>298315.5524615284</Pago>
+                <Amortizacion>196147.3181303713</Amortizacion>
+                <Interes>102168.23433115709</Interes>
             </Cuota>
             <Cuota>
-                <Deuda>400000.0</Deuda>
-                <Pago>260000.0</Pago>
-                <Amortizacion>200000.0</Amortizacion>
-                <Interes>60000.0</Interes>
+                <Deuda>484974.2440773427</Deuda>
+                <Pago>298315.5524615284</Pago>
+                <Amortizacion>225569.415849927</Amortizacion>
+                <Interes>72746.1366116014</Interes>
             </Cuota>
             <Cuota>
-                <Deuda>200000.0</Deuda>
-                <Pago>230000.0</Pago>
-                <Amortizacion>200000.0</Amortizacion>
-                <Interes>30000.0</Interes>
+                <Deuda>259404.82822741568</Deuda>
+                <Pago>298315.5524615284</Pago>
+                <Amortizacion>259404.82822741603</Amortizacion>
+                <Interes>38910.72423411235</Interes>
+            </Cuota>
+        </Cuotas>
+    </Amortizacion>
+<Amortizacion>
+        <Cliente>Luis Javier Chavarría Sánchez</Cliente>
+        <Sistema>Frances</Sistema>
+        <Deuda>1880.8 Colon</Deuda>
+        <Plazo>5</Plazo>
+        <Interes>0.15</Interes>
+        <TipoCambio>531.69</TipoCambio>
+        <Fecha>Chucky Date and Time: Sun May 29 17:19:05 2016</Fecha>
+        <Cuotas>
+            <Cuota>
+                <Deuda>1880.7952002106488</Deuda>
+                <Pago>561.0704592178307</Pago>
+                <Amortizacion>278.9511791862334</Amortizacion>
+                <Interes>282.1192800315973</Interes>
+            </Cuota>
+            <Cuota>
+                <Deuda>1601.8440210244153</Deuda>
+                <Pago>561.0704592178307</Pago>
+                <Amortizacion>320.79385606416844</Amortizacion>
+                <Interes>240.27660315366228</Interes>
+            </Cuota>
+            <Cuota>
+                <Deuda>1281.0501649602468</Deuda>
+                <Pago>561.0704592178307</Pago>
+                <Amortizacion>368.9129344737937</Amortizacion>
+                <Interes>192.157524744037</Interes>
+            </Cuota>
+            <Cuota>
+                <Deuda>912.1372304864531</Deuda>
+                <Pago>561.0704592178307</Pago>
+                <Amortizacion>424.24987464486276</Amortizacion>
+                <Interes>136.82058457296796</Interes>
+            </Cuota>
+            <Cuota>
+                <Deuda>487.8873558415903</Deuda>
+                <Pago>561.0704592178307</Pago>
+                <Amortizacion>487.8873558415922</Amortizacion>
+                <Interes>73.18310337623855</Interes>
+            </Cuota>
+        </Cuotas>
+    </Amortizacion>
+<Amortizacion>
+        <Cliente>Luis Javier Chavarr�a S�nchez</Cliente>
+        <Sistema>Frances</Sistema>
+        <Deuda>1000000 Colon</Deuda>
+        <Plazo>5</Plazo>
+        <Interes>0.15</Interes>
+        <TipoCambio>531.69</TipoCambio>
+        <Fecha>Chucky Date and Time: Sun May 29 17:20:44 2016</Fecha>
+        <Cuotas>
+            <Cuota>
+                <Deuda>1000000.0</Deuda>
+                <Pago>298315.5524615284</Pago>
+                <Amortizacion>148315.5524615284</Amortizacion>
+                <Interes>150000.0</Interes>
+            </Cuota>
+            <Cuota>
+                <Deuda>851684.4475384715</Deuda>
+                <Pago>298315.5524615284</Pago>
+                <Amortizacion>170562.88533075765</Amortizacion>
+                <Interes>127752.66713077073</Interes>
+            </Cuota>
+            <Cuota>
+                <Deuda>681121.562207714</Deuda>
+                <Pago>298315.5524615284</Pago>
+                <Amortizacion>196147.3181303713</Amortizacion>
+                <Interes>102168.23433115709</Interes>
+            </Cuota>
+            <Cuota>
+                <Deuda>484974.2440773427</Deuda>
+                <Pago>298315.5524615284</Pago>
+                <Amortizacion>225569.415849927</Amortizacion>
+                <Interes>72746.1366116014</Interes>
+            </Cuota>
+            <Cuota>
+                <Deuda>259404.82822741568</Deuda>
+                <Pago>298315.5524615284</Pago>
+                <Amortizacion>259404.82822741603</Amortizacion>
+                <Interes>38910.72423411235</Interes>
+            </Cuota>
+        </Cuotas>
+    </Amortizacion>
+<Amortizacion>
+        <Cliente>Luis Javier Chavarr�a S�nchez</Cliente>
+        <Sistema>Frances</Sistema>
+        <Deuda>1880.8 Colon</Deuda>
+        <Plazo>5</Plazo>
+        <Interes>0.15</Interes>
+        <TipoCambio>531.69</TipoCambio>
+        <Fecha>Chucky Date and Time: Sun May 29 17:21:17 2016</Fecha>
+        <Cuotas>
+            <Cuota>
+                <Deuda>1880.7952002106488</Deuda>
+                <Pago>561.0704592178307</Pago>
+                <Amortizacion>278.9511791862334</Amortizacion>
+                <Interes>282.1192800315973</Interes>
+            </Cuota>
+            <Cuota>
+                <Deuda>1601.8440210244153</Deuda>
+                <Pago>561.0704592178307</Pago>
+                <Amortizacion>320.79385606416844</Amortizacion>
+                <Interes>240.27660315366228</Interes>
+            </Cuota>
+            <Cuota>
+                <Deuda>1281.0501649602468</Deuda>
+                <Pago>561.0704592178307</Pago>
+                <Amortizacion>368.9129344737937</Amortizacion>
+                <Interes>192.157524744037</Interes>
+            </Cuota>
+            <Cuota>
+                <Deuda>912.1372304864531</Deuda>
+                <Pago>561.0704592178307</Pago>
+                <Amortizacion>424.24987464486276</Amortizacion>
+                <Interes>136.82058457296796</Interes>
+            </Cuota>
+            <Cuota>
+                <Deuda>487.8873558415903</Deuda>
+                <Pago>561.0704592178307</Pago>
+                <Amortizacion>487.8873558415922</Amortizacion>
+                <Interes>73.18310337623855</Interes>
+            </Cuota>
+        </Cuotas>
+    </Amortizacion>
+<Amortizacion>
+        <Cliente>Luis Javier Chavarría Sánchez</Cliente>
+        <Sistema>Americano</Sistema>
+        <Deuda>1000000 Colon</Deuda>
+        <Plazo>5</Plazo>
+        <Interes>0.15</Interes>
+        <TipoCambio>531.69</TipoCambio>
+        <Fecha>Chucky Date and Time: Sun May 29 17:41:11 2016</Fecha>
+        <Cuotas>
+            <Cuota>
+                <Deuda>1000000.0</Deuda>
+                <Pago>150000.0</Pago>
+                <Amortizacion>0.0</Amortizacion>
+                <Interes>150000.0</Interes>
+            </Cuota>
+            <Cuota>
+                <Deuda>1000000.0</Deuda>
+                <Pago>150000.0</Pago>
+                <Amortizacion>0.0</Amortizacion>
+                <Interes>150000.0</Interes>
+            </Cuota>
+            <Cuota>
+                <Deuda>1000000.0</Deuda>
+                <Pago>150000.0</Pago>
+                <Amortizacion>0.0</Amortizacion>
+                <Interes>150000.0</Interes>
+            </Cuota>
+            <Cuota>
+                <Deuda>1000000.0</Deuda>
+                <Pago>150000.0</Pago>
+                <Amortizacion>0.0</Amortizacion>
+                <Interes>150000.0</Interes>
+            </Cuota>
+            <Cuota>
+                <Deuda>1000000.0</Deuda>
+                <Pago>1150000.0</Pago>
+                <Amortizacion>1000000.0</Amortizacion>
+                <Interes>150000.0</Interes>
+            </Cuota>
+        </Cuotas>
+    </Amortizacion>
+<Amortizacion>
+        <Cliente>Luis Javier Chavarría Sánchez</Cliente>
+        <Sistema>Americano</Sistema>
+        <Deuda>1880.8 Colon</Deuda>
+        <Plazo>5</Plazo>
+        <Interes>0.15</Interes>
+        <TipoCambio>531.69</TipoCambio>
+        <Fecha>Chucky Date and Time: Sun May 29 17:43:17 2016</Fecha>
+        <Cuotas>
+            <Cuota>
+                <Deuda>1880.7952002106488</Deuda>
+                <Pago>282.1192800315973</Pago>
+                <Amortizacion>0.0</Amortizacion>
+                <Interes>282.1192800315973</Interes>
+            </Cuota>
+            <Cuota>
+                <Deuda>1880.7952002106488</Deuda>
+                <Pago>282.1192800315973</Pago>
+                <Amortizacion>0.0</Amortizacion>
+                <Interes>282.1192800315973</Interes>
+            </Cuota>
+            <Cuota>
+                <Deuda>1880.7952002106488</Deuda>
+                <Pago>282.1192800315973</Pago>
+                <Amortizacion>0.0</Amortizacion>
+                <Interes>282.1192800315973</Interes>
+            </Cuota>
+            <Cuota>
+                <Deuda>1880.7952002106488</Deuda>
+                <Pago>282.1192800315973</Pago>
+                <Amortizacion>0.0</Amortizacion>
+                <Interes>282.1192800315973</Interes>
+            </Cuota>
+            <Cuota>
+                <Deuda>1880.7952002106488</Deuda>
+                <Pago>2162.914480242246</Pago>
+                <Amortizacion>1880.7952002106488</Amortizacion>
+                <Interes>282.1192800315973</Interes>
+            </Cuota>
+        </Cuotas>
+    </Amortizacion>
+<Amortizacion>
+        <Cliente>Luis Javier Chavarr�a S�nchez</Cliente>
+        <Sistema>Americano</Sistema>
+        <Deuda>1000000 Colon</Deuda>
+        <Plazo>5</Plazo>
+        <Interes>0.15</Interes>
+        <TipoCambio>531.69</TipoCambio>
+        <Fecha>Chucky Date and Time: Sun May 29 17:47:56 2016</Fecha>
+        <Cuotas>
+            <Cuota>
+                <Deuda>1000000.0</Deuda>
+                <Pago>150000.0</Pago>
+                <Amortizacion>0.0</Amortizacion>
+                <Interes>150000.0</Interes>
+            </Cuota>
+            <Cuota>
+                <Deuda>1000000.0</Deuda>
+                <Pago>150000.0</Pago>
+                <Amortizacion>0.0</Amortizacion>
+                <Interes>150000.0</Interes>
+            </Cuota>
+            <Cuota>
+                <Deuda>1000000.0</Deuda>
+                <Pago>150000.0</Pago>
+                <Amortizacion>0.0</Amortizacion>
+                <Interes>150000.0</Interes>
+            </Cuota>
+            <Cuota>
+                <Deuda>1000000.0</Deuda>
+                <Pago>150000.0</Pago>
+                <Amortizacion>0.0</Amortizacion>
+                <Interes>150000.0</Interes>
+            </Cuota>
+            <Cuota>
+                <Deuda>1000000.0</Deuda>
+                <Pago>1150000.0</Pago>
+                <Amortizacion>1000000.0</Amortizacion>
+                <Interes>150000.0</Interes>
+            </Cuota>
+        </Cuotas>
+    </Amortizacion>
+<Amortizacion>
+        <Cliente>Luis Javier Chavarr�a S�nchez</Cliente>
+        <Sistema>Americano</Sistema>
+        <Deuda>1880.8 Colon</Deuda>
+        <Plazo>5</Plazo>
+        <Interes>0.15</Interes>
+        <TipoCambio>531.69</TipoCambio>
+        <Fecha>Chucky Date and Time: Sun May 29 17:53:00 2016</Fecha>
+        <Cuotas>
+            <Cuota>
+                <Deuda>1880.7952002106488</Deuda>
+                <Pago>282.1192800315973</Pago>
+                <Amortizacion>0.0</Amortizacion>
+                <Interes>282.1192800315973</Interes>
+            </Cuota>
+            <Cuota>
+                <Deuda>1880.7952002106488</Deuda>
+                <Pago>282.1192800315973</Pago>
+                <Amortizacion>0.0</Amortizacion>
+                <Interes>282.1192800315973</Interes>
+            </Cuota>
+            <Cuota>
+                <Deuda>1880.7952002106488</Deuda>
+                <Pago>282.1192800315973</Pago>
+                <Amortizacion>0.0</Amortizacion>
+                <Interes>282.1192800315973</Interes>
+            </Cuota>
+            <Cuota>
+                <Deuda>1880.7952002106488</Deuda>
+                <Pago>282.1192800315973</Pago>
+                <Amortizacion>0.0</Amortizacion>
+                <Interes>282.1192800315973</Interes>
+            </Cuota>
+            <Cuota>
+                <Deuda>1880.7952002106488</Deuda>
+                <Pago>2162.914480242246</Pago>
+                <Amortizacion>1880.7952002106488</Amortizacion>
+                <Interes>282.1192800315973</Interes>
             </Cuota>
         </Cuotas>
     </Amortizacion>

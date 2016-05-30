@@ -354,7 +354,7 @@ public class GUI extends javax.swing.JFrame implements IVista{
         resultado += "Tipo de cambio compra BCCR: " + String.valueOf(dto.getTipoCambio()) + "\n";
         resultado += "Datos de la consulta: \n";
         resultado += "Cliente: " + this.txt_NombreCliente.getText() + "\n";
-        resultado += "Monto del préstamos otorgado: " + this.txt_Prestamo.getText()
+        resultado += "Monto del préstamo otorgado: " + this.txt_Prestamo.getText()
             + " de clones. Se muestran los resultados en " + this.txt_Moneda.getText() + "\n";
         resultado += "Plazo del préstamo: " + this.txt_PeriodosTotales.getText() + " años \n";
         resultado += "Interés anual: " + this.txt_InteresAnaul.getText() + "% \n";

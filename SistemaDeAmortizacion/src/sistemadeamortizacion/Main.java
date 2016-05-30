@@ -1,34 +1,11 @@
 package sistemadeamortizacion;
 
 
-import Adaptador.AdaptadorChuky;
 import Adaptador.BCCRCambioDolar;
 import Adaptador.IAdaptador;
-import DTOs.DTOAdaptadorGettHTTP;
-import DTOs.DTOAdaptadorLocalHost;
-import DTOs.DTOBitacora;
-import DTOs.DTOCliente;
-import DTOs.DTOMoneda;
-import DTOs.DTOSistemaAmortizacion;
-import DTOs.DTOVistaModelo;
-import Datos.Bitacora.Bitacora;
-import Datos.Bitacora.BitacoraCSV;
-import Datos.Bitacora.BitacoraXML;
-import Datos.Constantes;
-import Factory.Factory;
-import Modelo.Clientes.Cliente;
-import Modelo.Monedas.Colon;
-import Modelo.Monedas.Moneda;
-import Modelo.Sistemas.Aleman;
-import Modelo.Sistemas.Americano;
-import Modelo.Sistemas.Frances;
-import Modelo.Sistemas.SistemaAmortizacion;
 import Vista.Consola;
 import Vista.GUI;
 import Vista.IVista;
-import java.io.File;
-import java.io.IOException;
-import java.net.URLEncoder;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -41,6 +18,9 @@ public class Main {
 
     
     public static void main(String[] args) throws Exception {
+        /*IAdaptador a = new BCCRCambioDolar();
+        System.out.println(a.realizarPeticion());*/
+        //Si sale no se puede instanciar, volver a intentar. Es problema con el BCCR
         Boolean control = true;
         Scanner scanner = new Scanner(System.in);
         String opcionElegida;
